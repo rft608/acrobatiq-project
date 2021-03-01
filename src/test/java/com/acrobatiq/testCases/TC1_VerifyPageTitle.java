@@ -36,7 +36,7 @@ public class TC1_VerifyPageTitle extends BaseClass {
 	}
 
 	@Test
-	public void pageTitleValidation() throws InterruptedException {
+	public void pageTitleValidation(){
 
 		driver.get(Constants.URL);
 		signInPage.userLogin(Constants.USERNAME, Constants.PASSWORD);		
