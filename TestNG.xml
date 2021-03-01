@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+
+
+<suite name="acrobatic">
+	<test name="Acrobatic Test">
+		<parameter name="Browser" value="Chrome" />
+		<classes>
+			<class name="com.acrobatiq.testCases.TC1_VerifyPageTitle" />
+			<class name="com.acrobatiq.testCases.TC2_VerifyTargetSection"/>
+		</classes>
+	</test>
+</suite>
