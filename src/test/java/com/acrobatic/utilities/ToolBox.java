@@ -15,17 +15,26 @@ public class ToolBox extends BaseClass {
 	public static void scrollPageByPixel(String pixel) {
 		JavascriptExecutor js = (JavascriptExecutor) driver;
 		js.executeScript("window.scrollBy(0," + pixel + ")", "");
+		pause(1);
 	}
-	
-	public static void waitUntilElementVisible(int maxWait,WebElement element) {
-		WebDriverWait wait=new WebDriverWait(driver,maxWait);
+
+	public static void waitUntilElementVisible(int maxWait, WebElement element) {
+		WebDriverWait wait = new WebDriverWait(driver, maxWait);
 		wait.until(ExpectedConditions.visibilityOf(element));
 	}
-	
-	public static void waitUntilElementInvisible(int maxWait,WebElement element) throws Exception{
-		WebDriverWait wait=new WebDriverWait(driver,maxWait);
+
+	public static void waitUntilElementInvisible(int maxWait, WebElement element){
+		WebDriverWait wait = new WebDriverWait(driver, maxWait);
 		wait.until(ExpectedConditions.invisibilityOf(element));
-		Thread.sleep(10000);
+		pause(10);
+	}
+
+	public static void pause(int sec) {
+		try {
+			Thread.sleep(sec * 1000);
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
 }

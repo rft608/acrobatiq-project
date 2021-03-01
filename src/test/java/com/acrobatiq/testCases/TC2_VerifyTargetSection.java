@@ -45,7 +45,7 @@ public class TC2_VerifyTargetSection extends BaseClass {
 	}
 
 	@Test
-	public void selfStudySectionValidation() throws Exception {
+	public void selfStudySectionValidation(){
 
 		driver.get(Constants.URL);
 		signInPage.userLogin(Constants.USERNAME, Constants.PASSWORD);

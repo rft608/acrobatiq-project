@@ -13,8 +13,10 @@ public class BaseClass {
 
 	@BeforeClass
 	public void setup() {
-		System.setProperty("webdriver.chrome.driver",
-				"/Users/RFT608/Documents/Acrobatic/acrobatic/Drivers/chromedriver-2");
+
+		String path = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", path + "/Drivers/chromedriver-2");
+		
 		driver = new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);

@@ -87,7 +87,7 @@ public class AssignmentPage {
 		closeIcon.get(index).click();
 	}
 
-	public String getHintMessage(String targetMessage) throws Exception {
+	public String getHintMessage(String targetMessage){
 		ToolBox.waitUntilElementVisible(Constants.SMALL_WAITING_TIME,hintIcon.get(0));
 		for (int i = 0; i < hintIcon.size(); i++) {
 			clickHintIcon(i);
@@ -144,7 +144,7 @@ public class AssignmentPage {
 		return false;
 	}
 	
-	public void waitLoadingIconInvisible() throws Exception {
+	public void waitLoadingIconInvisible(){
 		ToolBox.waitUntilElementInvisible(Constants.MEDIUM_WAITING_TIME,loadingIcon);
 	}
 	
